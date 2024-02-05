@@ -1,0 +1,3 @@
+NET "GCLK" LOC = P184;
+NET "BUZZER" LOC = P13;
+

@@ -1,0 +1,4 @@
+NET "GCLK" LOC = P184;
+NET "IR_DATA" LOC = P106;
+
+

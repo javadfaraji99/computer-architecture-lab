@@ -1,0 +1,4 @@
+NET "GCLK" LOC = P184;
+NET "PS2_CM" LOC = P92;
+NET "PS2_DM" LOC = P83;
+

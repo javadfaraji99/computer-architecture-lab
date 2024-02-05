@@ -1,0 +1,13 @@
+
+NET "data[0]" LOC = P35;
+NET "data[1]" LOC = P34;
+NET "data[2]" LOC = P33;
+NET "data[3]" LOC = P31;
+NET "data[4]" LOC = P29;
+NET "data[5]" LOC = P28;
+NET "data[6]" LOC = P27;
+NET "data[7]" LOC = P26;
+NET "lcd_e" LOC = P24;
+NET "lcd_rs" LOC = P21;
+NET "lcd_rw" LOC = P22;
+NET "rst_n" LOC = P185;

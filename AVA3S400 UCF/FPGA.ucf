@@ -1,0 +1,4 @@
+NET "i_CLK" LOC = P184;
+
+NET "i_SYS_Reset" LOC = P72;
+NET "i_SYS_Reset" PULLUP;

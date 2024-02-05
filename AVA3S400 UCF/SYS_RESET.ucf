@@ -1,0 +1,4 @@
+NET "GCLK" LOC = P184;
+NET "SYS_RESET" LOC = P72;
+
+
