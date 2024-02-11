@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/session 1/expriment2/BCD_to_sevensegment.xst" -ofn "/home/ise/Desktop/session 1/expriment2/BCD_to_sevensegment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc BCD_to_Sevensegment.ucf -p xc3s400-pq208-5 "BCD_to_sevensegment.ngc" BCD_to_sevensegment.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc BCD_to_Sevensegment.ucf -p xc3s400-pq208-5 "BCD_to_sevensegment.ngc" BCD_to_sevensegment.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o BCD_to_sevensegment_map.ncd BCD_to_sevensegment.ngd BCD_to_sevensegment.pcf 
+par -w -intstyle ise -ol high -t 1 BCD_to_sevensegment_map.ncd BCD_to_sevensegment.ncd BCD_to_sevensegment.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml BCD_to_sevensegment.twx BCD_to_sevensegment.ncd -o BCD_to_sevensegment.twr BCD_to_sevensegment.pcf -ucf BCD_to_Sevensegment.ucf 
+bitgen -intstyle ise -f BCD_to_sevensegment.ut BCD_to_sevensegment.ncd 

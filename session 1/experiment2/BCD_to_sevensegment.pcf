@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Feb 11 20:50:47 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "seg_sel" LOCATE = SITE "P19" LEVEL 1;
+COMP "seg_data<0>" LOCATE = SITE "P10" LEVEL 1;
+COMP "seg_data<1>" LOCATE = SITE "P7" LEVEL 1;
+COMP "seg_data<2>" LOCATE = SITE "P11" LEVEL 1;
+COMP "seg_data<3>" LOCATE = SITE "P5" LEVEL 1;
+COMP "seg_data<4>" LOCATE = SITE "P4" LEVEL 1;
+COMP "seg_data<5>" LOCATE = SITE "P12" LEVEL 1;
+COMP "seg_data<6>" LOCATE = SITE "P9" LEVEL 1;
+SCHEMATIC END;
+
