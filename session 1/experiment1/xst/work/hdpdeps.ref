@@ -1,0 +1,9 @@
+V3 7
+FL "/home/ise/Desktop/session 1/experiment1/full_adder.vhf" 2024/02/07.00:03:08 P.20131013
+EN work/full_adder 1707666522 \
+      FL "/home/ise/Desktop/session 1/experiment1/full_adder.vhf" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/full_adder/BEHAVIORAL 1707666523 \
+      FL "/home/ise/Desktop/session 1/experiment1/full_adder.vhf" \
+      EN work/full_adder 1707666522 CP AND2 CP XOR2 CP OR2

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/Desktop/session 1/experiment1/full_adder.ncd
+OUTFILE=/home/ise/Desktop/session 1/experiment1/full_adder.bit
+FAMILY=Spartan3
+PART=xc3s400-5pq208
+WORKINGDIR=/home/ise/Desktop/session 1/experiment1
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620
