@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/session 5/experiment/Serial_Communication_Multiply.xst" -ofn "/home/ise/Desktop/session 5/experiment/Serial_Communication_Multiply.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Serial_Communication_Multiply.ucf -bm Serial_Communication_Multiply.bmm -p xc3s400-pq208-5 "Serial_Communication_Multiply.ngc" Serial_Communication_Multiply.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Serial_Communication_Multiply.ucf -p xc3s400-pq208-5 "Serial_Communication_Multiply.ngc" Serial_Communication_Multiply.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Serial_Communication_Multiply.ucf -p xc3s400-pq208-5 "Serial_Communication_Multiply.ngc" Serial_Communication_Multiply.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o Serial_Communication_Multiply_map.ncd Serial_Communication_Multiply.ngd Serial_Communication_Multiply.pcf 
+par -w -intstyle ise -ol high -t 1 Serial_Communication_Multiply_map.ncd Serial_Communication_Multiply.ncd Serial_Communication_Multiply.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Serial_Communication_Multiply.twx Serial_Communication_Multiply.ncd -o Serial_Communication_Multiply.twr Serial_Communication_Multiply.pcf -ucf Serial_Communication_Multiply.ucf 
+bitgen -intstyle ise -f Serial_Communication_Multiply.ut Serial_Communication_Multiply.ncd 

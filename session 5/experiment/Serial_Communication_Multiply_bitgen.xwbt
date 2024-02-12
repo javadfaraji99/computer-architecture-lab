@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/Desktop/session 5/experiment/Serial_Communication_Multiply.ncd
+OUTFILE=/home/ise/Desktop/session 5/experiment/Serial_Communication_Multiply.bit
+FAMILY=Spartan3
+PART=xc3s400-5pq208
+WORKINGDIR=/home/ise/Desktop/session 5/experiment
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

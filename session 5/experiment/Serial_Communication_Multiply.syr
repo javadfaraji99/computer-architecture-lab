@@ -1,0 +1,458 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
+ 
+--> 
+Reading design: Serial_Communication_Multiply.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Serial_Communication_Multiply.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Serial_Communication_Multiply"
+Output Format                      : NGC
+Target Device                      : xc3s400-5-pq208
+
+---- Source Options
+Top Module Name                    : Serial_Communication_Multiply
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/ise/Desktop/session 5/experiment/Serial_Communication_Multiply.vhd" in Library work.
+Entity <Serial_Communication_Multiply> compiled.
+Entity <Serial_Communication_Multiply> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Serial_Communication_Multiply> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Serial_Communication_Multiply> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:819 - "/home/ise/Desktop/session 5/experiment/Serial_Communication_Multiply.vhd" line 56: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <DIP>
+Entity <Serial_Communication_Multiply> analyzed. Unit <Serial_Communication_Multiply> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Serial_Communication_Multiply>.
+    Related source file is "/home/ise/Desktop/session 5/experiment/Serial_Communication_Multiply.vhd".
+WARNING:Xst:643 - "/home/ise/Desktop/session 5/experiment/Serial_Communication_Multiply.vhd" line 78: The result of a 4x4-bit multiplication is partially used. Only the 7 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 1-bit register for signal <TX>.
+    Found 4x4-bit multiplier for signal <C$mult0001> created at line 78.
+    Found 6-bit subtractor for signal <C1$share0000> created at line 79.
+    Found 7-bit comparator greater for signal <C2$cmp_gt0000> created at line 79.
+    Found 7-bit comparator greater for signal <C2$cmp_gt0001> created at line 81.
+    Found 7-bit comparator greater for signal <C2$cmp_gt0002> created at line 84.
+    Found 7-bit comparator greater for signal <C2$cmp_gt0003> created at line 87.
+    Found 7-bit comparator greater for signal <C2$cmp_gt0004> created at line 90.
+    Found 7-bit comparator greater for signal <C2$cmp_gt0005> created at line 93.
+    Found 7-bit comparator greater for signal <C2$cmp_gt0006> created at line 96.
+    Found 7-bit comparator greater for signal <C2$cmp_gt0007> created at line 99.
+    Found 1-bit register for signal <CLCK>.
+    Found 8-bit comparator less for signal <CLCK$cmp_lt0000> created at line 47.
+    Found 8-bit up counter for signal <counter>.
+    Found 20-bit register for signal <counter0>.
+    Found 20-bit adder for signal <counter0$addsub0000> created at line 222.
+    Found 6-bit adder for signal <Dahgan$add0000> created at line 108.
+    Found 6-bit adder for signal <Yekan$add0000> created at line 107.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   9 Comparator(s).
+Unit <Serial_Communication_Multiply> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 4x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 4
+ 20-bit adder                                          : 1
+ 6-bit adder                                           : 2
+ 6-bit subtractor                                      : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 3
+ 1-bit register                                        : 2
+ 20-bit register                                       : 1
+# Comparators                                          : 9
+ 7-bit comparator greater                              : 8
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 4x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 4
+ 20-bit adder                                          : 1
+ 6-bit adder                                           : 2
+ 6-bit subtractor                                      : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 22
+ Flip-Flops                                            : 22
+# Comparators                                          : 9
+ 7-bit comparator greater                              : 8
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Serial_Communication_Multiply> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Serial_Communication_Multiply, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 30
+ Flip-Flops                                            : 30
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Serial_Communication_Multiply.ngr
+Top Level Output File Name         : Serial_Communication_Multiply
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 198
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 26
+#      LUT2                        : 21
+#      LUT2_D                      : 1
+#      LUT2_L                      : 2
+#      LUT3                        : 16
+#      LUT3_D                      : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 43
+#      LUT4_D                      : 3
+#      LUT4_L                      : 11
+#      MUXCY                       : 30
+#      MUXF5                       : 5
+#      VCC                         : 1
+#      XORCY                       : 33
+# FlipFlops/Latches                : 30
+#      FD                          : 18
+#      FDE                         : 1
+#      FDR                         : 8
+#      FDS                         : 3
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 8
+#      OBUF                        : 1
+# MULTs                            : 1
+#      MULT18X18                   : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-5 
+
+ Number of Slices:                       69  out of   3584     1%  
+ Number of Slice Flip Flops:             30  out of   7168     0%  
+ Number of 4 input LUTs:                128  out of   7168     1%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    141     7%  
+ Number of MULT18X18s:                    1  out of     16     6%  
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+GCLK                               | BUFGP                  | 9     |
+CLCK1                              | BUFG                   | 21    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.740ns (Maximum Frequency: 148.366MHz)
+   Minimum input arrival time before clock: 18.224ns
+   Maximum output required time after clock: 6.216ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'GCLK'
+  Clock period: 5.526ns (frequency: 180.973MHz)
+  Total number of paths / destination ports: 109 / 18
+-------------------------------------------------------------------------
+Delay:               5.526ns (Levels of Logic = 3)
+  Source:            counter_1 (FF)
+  Destination:       counter_0 (FF)
+  Source Clock:      GCLK rising
+  Destination Clock: GCLK rising
+
+  Data Path: counter_1 to counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.626   1.040  counter_1 (counter_1)
+     LUT4:I0->O            1   0.479   0.740  CLCK_not00024 (CLCK_not00024)
+     LUT4:I2->O            1   0.479   0.000  CLCK_not0002201 (CLCK_not000220)
+     MUXF5:I1->O           9   0.314   0.955  CLCK_not000220_f5 (CLCK_not0002)
+     FDR:R                     0.892          counter_0
+    ----------------------------------------
+    Total                      5.526ns (2.790ns logic, 2.736ns route)
+                                       (50.5% logic, 49.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLCK1'
+  Clock period: 6.740ns (frequency: 148.366MHz)
+  Total number of paths / destination ports: 908 / 24
+-------------------------------------------------------------------------
+Delay:               6.740ns (Levels of Logic = 4)
+  Source:            counter0_18 (FF)
+  Destination:       counter0_7 (FF)
+  Source Clock:      CLCK1 rising
+  Destination Clock: CLCK1 rising
+
+  Data Path: counter0_18 to counter0_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.626   1.066  counter0_18 (counter0_18)
+     LUT3:I0->O            1   0.479   0.740  TX_and0000133_SW0 (N87)
+     LUT4:I2->O            5   0.479   0.842  TX_and0000133 (counter0_and0000)
+     LUT4_D:I2->O         18   0.479   1.374  counter0_mux0001<15>177 (N11)
+     LUT2:I1->O            1   0.479   0.000  counter0_mux0001<12>1 (counter0_mux0001<12>)
+     FD:D                      0.176          counter0_7
+    ----------------------------------------
+    Total                      6.740ns (2.718ns logic, 4.022ns route)
+                                       (40.3% logic, 59.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLCK1'
+  Total number of paths / destination ports: 5984 / 2
+-------------------------------------------------------------------------
+Offset:              18.224ns (Levels of Logic = 13)
+  Source:            DIP<7> (PAD)
+  Destination:       TX (FF)
+  Destination Clock: CLCK1 rising
+
+  Data Path: DIP<7> to TX
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.715   0.681  DIP_7_IBUF (DIP_7_IBUF)
+     MULT18X18:A3->P3     10   1.868   1.259  Mmult_C_mult0001 (C_mult0001<3>)
+     LUT3:I0->O            1   0.479   0.740  C2_cmp_gt00051_SW0 (N611)
+     LUT4:I2->O            5   0.479   1.078  C2_cmp_gt00051 (C2_cmp_gt0005)
+     LUT4:I0->O            1   0.479   0.704  C1_mux0008<3>19_SW0 (N89)
+     LUT4:I3->O            2   0.479   0.915  C1_mux0008<3>19 (C1_mux0008<3>)
+     LUT2:I1->O            1   0.479   0.000  Msub_C1_share0000_lut<2> (Msub_C1_share0000_lut<2>)
+     MUXCY:S->O            1   0.435   0.000  Msub_C1_share0000_cy<2> (Msub_C1_share0000_cy<2>)
+     XORCY:CI->O           1   0.786   0.740  Msub_C1_share0000_xor<3> (C1_share0000<3>)
+     LUT3:I2->O            1   0.479   0.976  TX_mux000173_SW0 (N67)
+     LUT3:I0->O            1   0.479   0.704  TX_mux000178 (TX_mux000178)
+     LUT4:I3->O            1   0.479   0.740  TX_mux0001150 (TX_mux0001150)
+     LUT4:I2->O            1   0.479   0.681  TX_mux0001175 (TX_mux0001175)
+     FDS:S                     0.892          TX
+    ----------------------------------------
+    Total                     18.224ns (9.007ns logic, 9.217ns route)
+                                       (49.4% logic, 50.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLCK1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.216ns (Levels of Logic = 1)
+  Source:            TX (FF)
+  Destination:       TX (PAD)
+  Source Clock:      CLCK1 rising
+
+  Data Path: TX to TX
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.626   0.681  TX (TX_OBUF)
+     OBUF:I->O                 4.909          TX_OBUF (TX)
+    ----------------------------------------
+    Total                      6.216ns (5.535ns logic, 0.681ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 1.21 secs
+ 
+--> 
+
+
+Total memory usage is 615024 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
