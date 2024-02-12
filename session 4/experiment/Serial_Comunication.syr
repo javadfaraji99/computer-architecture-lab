@@ -1,0 +1,418 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
+ 
+--> 
+Reading design: Serial_Comunication.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Serial_Comunication.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Serial_Comunication"
+Output Format                      : NGC
+Target Device                      : xc3s400-5-pq208
+
+---- Source Options
+Top Module Name                    : Serial_Comunication
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/ise/Desktop/session 4 /experiment/Serial_Comunication.vhd" in Library work.
+Entity <serial_comunication> compiled.
+Entity <serial_comunication> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Serial_Comunication> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Serial_Comunication> in library <work> (Architecture <behavioral>).
+Entity <Serial_Comunication> analyzed. Unit <Serial_Comunication> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Serial_Comunication>.
+    Related source file is "/home/ise/Desktop/session 4 /experiment/Serial_Comunication.vhd".
+    Found 1-bit register for signal <TX>.
+    Found 1-bit register for signal <CLCK>.
+    Found 8-bit comparator less for signal <CLCK$cmp_lt0000> created at line 49.
+    Found 8-bit up counter for signal <counter>.
+    Found 17-bit register for signal <counter0>.
+    Found 17-bit adder for signal <counter0$addsub0000> created at line 99.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <Serial_Comunication> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 17-bit adder                                          : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 3
+ 1-bit register                                        : 2
+ 17-bit register                                       : 1
+# Comparators                                          : 1
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 17-bit adder                                          : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+# Comparators                                          : 1
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Serial_Comunication> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Serial_Comunication, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Serial_Comunication.ngr
+Top Level Output File Name         : Serial_Comunication
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 122
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 23
+#      LUT2                        : 15
+#      LUT2_L                      : 2
+#      LUT3                        : 2
+#      LUT3_D                      : 1
+#      LUT4                        : 19
+#      LUT4_D                      : 2
+#      LUT4_L                      : 3
+#      MUXCY                       : 23
+#      MUXF5                       : 2
+#      VCC                         : 1
+#      XORCY                       : 25
+# FlipFlops/Latches                : 27
+#      FD                          : 17
+#      FDE                         : 1
+#      FDR                         : 8
+#      FDS                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 8
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-5 
+
+ Number of Slices:                       37  out of   3584     1%  
+ Number of Slice Flip Flops:             27  out of   7168     0%  
+ Number of 4 input LUTs:                 70  out of   7168     0%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    141     7%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+GCLK                               | BUFGP                  | 9     |
+CLCK                               | NONE(counter0_0)       | 18    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.625ns (Maximum Frequency: 150.950MHz)
+   Minimum input arrival time before clock: 4.769ns
+   Maximum output required time after clock: 6.216ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'GCLK'
+  Clock period: 5.526ns (frequency: 180.973MHz)
+  Total number of paths / destination ports: 109 / 18
+-------------------------------------------------------------------------
+Delay:               5.526ns (Levels of Logic = 3)
+  Source:            counter_1 (FF)
+  Destination:       counter_0 (FF)
+  Source Clock:      GCLK rising
+  Destination Clock: GCLK rising
+
+  Data Path: counter_1 to counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.626   1.040  counter_1 (counter_1)
+     LUT4:I0->O            1   0.479   0.740  CLCK_not00024 (CLCK_not00024)
+     LUT4:I2->O            1   0.479   0.000  CLCK_not0002211 (CLCK_not000221)
+     MUXF5:I1->O           9   0.314   0.955  CLCK_not000221_f5 (CLCK_not0002)
+     FDR:R                     0.892          counter_0
+    ----------------------------------------
+    Total                      5.526ns (2.790ns logic, 2.736ns route)
+                                       (50.5% logic, 49.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLCK'
+  Clock period: 6.625ns (frequency: 150.950MHz)
+  Total number of paths / destination ports: 674 / 19
+-------------------------------------------------------------------------
+Delay:               6.625ns (Levels of Logic = 4)
+  Source:            counter0_4 (FF)
+  Destination:       counter0_5 (FF)
+  Source Clock:      CLCK rising
+  Destination Clock: CLCK rising
+
+  Data Path: counter0_4 to counter0_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.626   1.040  counter0_4 (counter0_4)
+     LUT4:I0->O            1   0.479   0.851  TX_and0000125 (TX_and0000125)
+     LUT2:I1->O            3   0.479   0.794  TX_and0000126 (counter0_and0000)
+     LUT4_D:I3->O         16   0.479   1.221  counter0_mux0001<14>175 (N01)
+     LUT2:I1->O            1   0.479   0.000  counter0_mux0001<11>1 (counter0_mux0001<11>)
+     FD:D                      0.176          counter0_5
+    ----------------------------------------
+    Total                      6.625ns (2.718ns logic, 3.907ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLCK'
+  Total number of paths / destination ports: 8 / 1
+-------------------------------------------------------------------------
+Offset:              4.769ns (Levels of Logic = 5)
+  Source:            DIP<3> (PAD)
+  Destination:       TX (FF)
+  Destination Clock: CLCK rising
+
+  Data Path: DIP<3> to TX
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.715   0.976  DIP_3_IBUF (DIP_3_IBUF)
+     LUT2_L:I0->LO         1   0.479   0.123  TX_mux00018 (TX_mux00018)
+     LUT4:I3->O            1   0.479   0.704  TX_mux000114 (TX_mux000114)
+     LUT4_L:I3->LO         1   0.479   0.159  TX_mux000155 (TX_mux000155)
+     LUT3:I2->O            1   0.479   0.000  TX_mux00011441 (TX_mux0001144)
+     FDS:D                     0.176          TX
+    ----------------------------------------
+    Total                      4.769ns (2.807ns logic, 1.962ns route)
+                                       (58.9% logic, 41.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLCK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              6.216ns (Levels of Logic = 1)
+  Source:            TX (FF)
+  Destination:       TX (PAD)
+  Source Clock:      CLCK rising
+
+  Data Path: TX to TX
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.626   0.681  TX (TX_OBUF)
+     OBUF:I->O                 4.909          TX_OBUF (TX)
+    ----------------------------------------
+    Total                      6.216ns (5.535ns logic, 0.681ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.00 secs
+ 
+--> 
+
+
+Total memory usage is 608664 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

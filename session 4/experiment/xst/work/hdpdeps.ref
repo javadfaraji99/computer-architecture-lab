@@ -1,0 +1,8 @@
+V3 3
+FL "/home/ise/Desktop/session 4 /experiment/Serial_Comunication.vhd" 2024/02/12.13:42:19 P.20131013
+EN work/Serial_Comunication 1707745343 \
+      FL "/home/ise/Desktop/session 4 /experiment/Serial_Comunication.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/Serial_Comunication/Behavioral 1707745344 \
+      FL "/home/ise/Desktop/session 4 /experiment/Serial_Comunication.vhd" \
+      EN work/Serial_Comunication 1707745343
