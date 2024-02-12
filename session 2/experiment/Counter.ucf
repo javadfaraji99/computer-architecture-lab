@@ -1,0 +1,15 @@
+NET "gclk" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "gclk" LOC = P184;
+NET "seg_data[0]" LOC = P10;
+NET "seg_data[1]" LOC = P7;
+NET "seg_data[2]" LOC = P11;
+NET "seg_data[3]" LOC = P5;
+NET "seg_data[4]" LOC = P4;
+NET "seg_data[5]" LOC = P12;
+NET "seg_data[6]" LOC = P9;
+
+NET "seg_sel[0]" LOC = P15;
+NET "seg_sel[1]" LOC = P20;
+NET "seg_sel[2]" LOC = P19;
+NET "seg_sel[3]" LOC = P18;
+NET "seg_sel[4]" LOC = P16;

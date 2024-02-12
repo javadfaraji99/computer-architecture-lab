@@ -1,0 +1,7 @@
+V3 3
+FL /home/ise/Desktop/session2/Counter.vhd 2024/02/12.09:05:49 P.20131013
+EN work/Counter 1707728757 FL /home/ise/Desktop/session2/Counter.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Counter/Behavioral 1707728758 \
+      FL /home/ise/Desktop/session2/Counter.vhd EN work/Counter 1707728757
