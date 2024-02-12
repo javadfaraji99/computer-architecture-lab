@@ -1,0 +1,48 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Feb 12 09:32:58 2024
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "seg_bin_m1<1>" LOCATE = SITE "P67" LEVEL 1;
+COMP "seg_bin_m1<2>" LOCATE = SITE "P68" LEVEL 1;
+COMP "seg_bin_m1<3>" LOCATE = SITE "P71" LEVEL 1;
+COMP "start_btn" LOCATE = SITE "P185" LEVEL 1;
+PIN start_btn_pin<0> = BEL "start_btn" PINNAME PAD;
+PIN "start_btn_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "gclk" LOCATE = SITE "P184" LEVEL 1;
+PIN gclk_pin<0> = BEL "gclk" PINNAME PAD;
+PIN "gclk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "alarm" LOCATE = SITE "P13" LEVEL 1;
+COMP "seg_data<0>" LOCATE = SITE "P10" LEVEL 1;
+COMP "seg_data<1>" LOCATE = SITE "P7" LEVEL 1;
+COMP "seg_data<2>" LOCATE = SITE "P11" LEVEL 1;
+COMP "seg_data<3>" LOCATE = SITE "P5" LEVEL 1;
+COMP "seg_data<4>" LOCATE = SITE "P4" LEVEL 1;
+COMP "seg_data<5>" LOCATE = SITE "P12" LEVEL 1;
+COMP "seg_data<6>" LOCATE = SITE "P9" LEVEL 1;
+COMP "seg_sel<0>" LOCATE = SITE "P15" LEVEL 1;
+COMP "seg_sel<1>" LOCATE = SITE "P20" LEVEL 1;
+COMP "seg_sel<2>" LOCATE = SITE "P19" LEVEL 1;
+COMP "seg_sel<3>" LOCATE = SITE "P18" LEVEL 1;
+COMP "seg_sel<4>" LOCATE = SITE "P16" LEVEL 1;
+COMP "reset" LOCATE = SITE "P189" LEVEL 1;
+COMP "seg_bin_s0<0>" LOCATE = SITE "P42" LEVEL 1;
+COMP "seg_bin_s0<1>" LOCATE = SITE "P43" LEVEL 1;
+COMP "seg_bin_s0<2>" LOCATE = SITE "P44" LEVEL 1;
+COMP "seg_bin_m0<0>" LOCATE = SITE "P61" LEVEL 1;
+COMP "seg_bin_s0<3>" LOCATE = SITE "P45" LEVEL 1;
+COMP "seg_bin_m0<1>" LOCATE = SITE "P62" LEVEL 1;
+COMP "seg_bin_s1<0>" LOCATE = SITE "P46" LEVEL 1;
+COMP "seg_bin_m0<2>" LOCATE = SITE "P63" LEVEL 1;
+COMP "stop_btn" LOCATE = SITE "P190" LEVEL 1;
+PIN stop_btn_pin<0> = BEL "stop_btn" PINNAME PAD;
+PIN "stop_btn_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "seg_bin_s1<1>" LOCATE = SITE "P48" LEVEL 1;
+COMP "seg_bin_m0<3>" LOCATE = SITE "P64" LEVEL 1;
+COMP "seg_bin_s1<2>" LOCATE = SITE "P50" LEVEL 1;
+COMP "seg_bin_m1<0>" LOCATE = SITE "P65" LEVEL 1;
+COMP "seg_bin_s1<3>" LOCATE = SITE "P51" LEVEL 1;
+NET "gclk_BUFGP/IBUFG" BEL "gclk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+NET "stop_btn_BUFGP/IBUFG" BEL "stop_btn_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

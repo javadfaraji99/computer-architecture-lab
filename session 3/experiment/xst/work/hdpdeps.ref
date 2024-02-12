@@ -1,0 +1,7 @@
+V3 3
+FL "/home/ise/Desktop/session 3/experiment/Timer.vhd" 2024/02/12.09:32:13 P.20131013
+EN work/Timer 1707730340 FL "/home/ise/Desktop/session 3/experiment/Timer.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Timer/Behavioral 1707730341 \
+      FL "/home/ise/Desktop/session 3/experiment/Timer.vhd" EN work/Timer 1707730340

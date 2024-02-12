@@ -1,0 +1,506 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.01 secs
+ 
+--> 
+Reading design: Timer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Timer.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Timer"
+Output Format                      : NGC
+Target Device                      : xc3s400-5-pq208
+
+---- Source Options
+Top Module Name                    : Timer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/ise/Desktop/session 3/experiment/Timer.vhd" in Library work.
+Entity <timer> compiled.
+Entity <timer> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Timer> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Timer> in library <work> (Architecture <behavioral>).
+Entity <Timer> analyzed. Unit <Timer> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Timer>.
+    Related source file is "/home/ise/Desktop/session 3/experiment/Timer.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <holder>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16x7-bit ROM for signal <seg_data_reg1>.
+    Found 16x7-bit ROM for signal <seg_data_reg2>.
+    Found 16x7-bit ROM for signal <seg_data_reg3>.
+    Found 16x7-bit ROM for signal <seg_data_reg4>.
+    Found 5-bit register for signal <seg_sel>.
+    Found 7-bit register for signal <seg_data>.
+    Found 1-bit register for signal <alarm>.
+    Found 1-bit register for signal <CLK10MS>.
+    Found 17-bit comparator less for signal <CLK10MS$cmp_lt0000> created at line 68.
+    Found 17-bit up counter for signal <count_div>.
+    Found 24-bit up counter for signal <count_div0>.
+    Found 4-bit register for signal <counterseg1>.
+    Found 4-bit adder for signal <counterseg1$addsub0000> created at line 93.
+    Found 4-bit register for signal <counterseg1sig>.
+    Found 4-bit register for signal <counterseg2>.
+    Found 4-bit adder for signal <counterseg2$addsub0000> created at line 97.
+    Found 4-bit register for signal <counterseg2sig>.
+    Found 4-bit register for signal <counterseg3>.
+    Found 4-bit adder for signal <counterseg3$addsub0000> created at line 101.
+    Found 4-bit register for signal <counterseg3sig>.
+    Found 4-bit register for signal <counterseg4>.
+    Found 4-bit adder for signal <counterseg4$addsub0000> created at line 105.
+    Found 24-bit comparator less for signal <counterseg4$cmp_lt0001> created at line 85.
+    Found 4-bit comparator less for signal <counterseg4$cmp_lt0002> created at line 92.
+    Found 4-bit comparator less for signal <counterseg4$cmp_lt0003> created at line 96.
+    Found 4-bit comparator less for signal <counterseg4$cmp_lt0004> created at line 100.
+    Found 4-bit comparator less for signal <counterseg4$cmp_lt0005> created at line 104.
+    Found 4-bit register for signal <counterseg4sig>.
+    Found 3-bit register for signal <RefreshSEG>.
+    Found 3-bit adder for signal <RefreshSEG$addsub0000> created at line 140.
+    Found 3-bit comparator less for signal <RefreshSEG$cmp_lt0000> created at line 139.
+    Found 1-bit register for signal <TIMER1S>.
+    Summary:
+	inferred   4 ROM(s).
+	inferred   2 Counter(s).
+	inferred  50 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   7 Comparator(s).
+Unit <Timer> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 4
+ 16x7-bit ROM                                          : 4
+# Adders/Subtractors                                   : 5
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 4
+# Counters                                             : 2
+ 17-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 17
+ 1-bit register                                        : 7
+ 3-bit register                                        : 1
+ 4-bit register                                        : 8
+ 7-bit register                                        : 1
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 7
+ 17-bit comparator less                                : 1
+ 24-bit comparator less                                : 1
+ 3-bit comparator less                                 : 1
+ 4-bit comparator less                                 : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Timer>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_seg_data_reg1> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_seg_data_reg2> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_seg_data_reg4> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_seg_data_reg3> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <Timer> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 4
+ 16x7-bit ROM                                          : 4
+# Adders/Subtractors                                   : 5
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 4
+# Counters                                             : 2
+ 17-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 49
+ Flip-Flops                                            : 49
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 7
+ 17-bit comparator less                                : 1
+ 24-bit comparator less                                : 1
+ 3-bit comparator less                                 : 1
+ 4-bit comparator less                                 : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Timer> ...
+WARNING:Xst:1710 - FF/Latch <counterseg4_3> (without init value) has a constant value of 0 in block <Timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg4sig_3> (without init value) has a constant value of 0 in block <Timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg4_3> (without init value) has a constant value of 0 in block <Timer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg4sig_3> (without init value) has a constant value of 0 in block <Timer>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Timer, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 88
+ Flip-Flops                                            : 88
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Timer.ngr
+Top Level Output File Name         : Timer
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 33
+
+Cell Usage :
+# BELS                             : 253
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 42
+#      LUT2                        : 9
+#      LUT2_L                      : 1
+#      LUT3                        : 19
+#      LUT4                        : 66
+#      LUT4_D                      : 2
+#      LUT4_L                      : 8
+#      MUXCY                       : 47
+#      MUXF5                       : 7
+#      VCC                         : 1
+#      XORCY                       : 41
+# FlipFlops/Latches                : 89
+#      FD                          : 25
+#      FDE                         : 1
+#      FDR                         : 36
+#      FDRE                        : 24
+#      FDRS                        : 1
+#      FDS                         : 1
+#      LDC_1                       : 1
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 31
+#      IBUF                        : 2
+#      OBUF                        : 29
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-5 
+
+ Number of Slices:                       83  out of   3584     2%  
+ Number of Slice Flip Flops:             89  out of   7168     1%  
+ Number of 4 input LUTs:                156  out of   7168     2%  
+ Number of IOs:                          33
+ Number of bonded IOBs:                  33  out of    141    23%  
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+gclk                               | BUFGP                  | 73    |
+CLK10MS                            | NONE(seg_data_0)       | 15    |
+stop_btn                           | BUFGP                  | 1     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------+------------------------+-------+
+Control Signal                             | Buffer(FF name)        | Load  |
+-------------------------------------------+------------------------+-------+
+holder_0_not0000(holder_0_not00001_INV_0:O)| NONE(holder)           | 1     |
+-------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.884ns (Maximum Frequency: 145.267MHz)
+   Minimum input arrival time before clock: 3.777ns
+   Maximum output required time after clock: 6.490ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'gclk'
+  Clock period: 6.884ns (frequency: 145.267MHz)
+  Total number of paths / destination ports: 1809 / 115
+-------------------------------------------------------------------------
+Delay:               6.884ns (Levels of Logic = 10)
+  Source:            count_div0_9 (FF)
+  Destination:       alarm (FF)
+  Source Clock:      gclk rising
+  Destination Clock: gclk rising
+
+  Data Path: count_div0_9 to alarm
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.626   1.040  count_div0_9 (count_div0_9)
+     LUT1:I0->O            1   0.479   0.000  Mcompar_counterseg4_cmp_lt0001_cy<0>_rt (Mcompar_counterseg4_cmp_lt0001_cy<0>_rt)
+     MUXCY:S->O            1   0.435   0.000  Mcompar_counterseg4_cmp_lt0001_cy<0> (Mcompar_counterseg4_cmp_lt0001_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_counterseg4_cmp_lt0001_cy<1> (Mcompar_counterseg4_cmp_lt0001_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_counterseg4_cmp_lt0001_cy<2> (Mcompar_counterseg4_cmp_lt0001_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_counterseg4_cmp_lt0001_cy<3> (Mcompar_counterseg4_cmp_lt0001_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_counterseg4_cmp_lt0001_cy<4> (Mcompar_counterseg4_cmp_lt0001_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_counterseg4_cmp_lt0001_cy<5> (Mcompar_counterseg4_cmp_lt0001_cy<5>)
+     MUXCY:CI->O           1   0.055   0.000  Mcompar_counterseg4_cmp_lt0001_cy<6> (Mcompar_counterseg4_cmp_lt0001_cy<6>)
+     MUXCY:CI->O          40   0.246   1.673  Mcompar_counterseg4_cmp_lt0001_cy<7> (Mcompar_counterseg4_cmp_lt0001_cy<7>)
+     LUT4:I2->O            1   0.479   0.681  alarm_not0001172 (alarm_not0001)
+     FDR:R                     0.892          alarm
+    ----------------------------------------
+    Total                      6.884ns (3.490ns logic, 3.394ns route)
+                                       (50.7% logic, 49.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK10MS'
+  Clock period: 4.633ns (frequency: 215.861MHz)
+  Total number of paths / destination ports: 65 / 21
+-------------------------------------------------------------------------
+Delay:               4.633ns (Levels of Logic = 3)
+  Source:            RefreshSEG_0 (FF)
+  Destination:       seg_data_1 (FF)
+  Source Clock:      CLK10MS rising
+  Destination Clock: CLK10MS rising
+
+  Data Path: RefreshSEG_0 to seg_data_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             21   0.626   1.583  RefreshSEG_0 (RefreshSEG_0)
+     LUT4:I0->O            1   0.479   0.976  seg_data_mux0000<4>179 (seg_data_mux0000<4>179)
+     LUT4:I0->O            1   0.479   0.000  seg_data_mux0000<4>1197_F (N76)
+     MUXF5:I0->O           1   0.314   0.000  seg_data_mux0000<4>1197 (seg_data_mux0000<4>)
+     FD:D                      0.176          seg_data_4
+    ----------------------------------------
+    Total                      4.633ns (2.074ns logic, 2.559ns route)
+                                       (44.8% logic, 55.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'gclk'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              3.777ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       counterseg1_0 (FF)
+  Destination Clock: gclk rising
+
+  Data Path: reset to counterseg1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.715   0.681  reset_IBUF (reset_IBUF)
+     INV:I->O             15   0.479   1.010  reset_inv1_INV_0 (reset_inv)
+     FDR:R                     0.892          counterseg1_0
+    ----------------------------------------
+    Total                      3.777ns (2.086ns logic, 1.691ns route)
+                                       (55.2% logic, 44.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'gclk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              6.490ns (Levels of Logic = 1)
+  Source:            counterseg1sig_3 (FF)
+  Destination:       seg_bin_s0<3> (PAD)
+  Source Clock:      gclk rising
+
+  Data Path: counterseg1sig_3 to seg_bin_s0<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.626   0.955  counterseg1sig_3 (counterseg1sig_3)
+     OBUF:I->O                 4.909          seg_bin_s0_3_OBUF (seg_bin_s0<3>)
+    ----------------------------------------
+    Total                      6.490ns (5.535ns logic, 0.955ns route)
+                                       (85.3% logic, 14.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK10MS'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            seg_sel_4 (FF)
+  Destination:       seg_sel<4> (PAD)
+  Source Clock:      CLK10MS rising
+
+  Data Path: seg_sel_4 to seg_sel<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q             2   0.626   0.745  seg_sel_4 (seg_sel_4)
+     OBUF:I->O                 4.909          seg_sel_4_OBUF (seg_sel<4>)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 1.24 secs
+ 
+--> 
+
+
+Total memory usage is 614220 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

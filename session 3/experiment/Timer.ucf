@@ -1,0 +1,40 @@
+NET "gclk" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "start_btn" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "stop_btn" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "gclk" LOC = P184;
+NET "seg_data[0]" LOC = P10;
+NET "seg_data[1]" LOC = P7;
+NET "seg_data[2]" LOC = P11;
+NET "seg_data[3]" LOC = P5;
+NET "seg_data[4]" LOC = P4;
+NET "seg_data[5]" LOC = P12;
+NET "seg_data[6]" LOC = P9;
+
+NET "seg_sel[0]" LOC = P15;
+NET "seg_sel[1]" LOC = P20;
+NET "seg_sel[2]" LOC = P19;
+NET "seg_sel[3]" LOC = P18;
+NET "seg_sel[4]" LOC = P16;
+
+NET "seg_bin_s0[0]" LOC = P42;
+NET "seg_bin_s0[1]" LOC = P43;
+NET "seg_bin_s0[2]" LOC = P44;
+NET "seg_bin_s0[3]" LOC = P45;
+NET "seg_bin_s1[0]" LOC = P46;
+NET "seg_bin_s1[1]" LOC = P48;
+NET "seg_bin_s1[2]" LOC = P50;
+NET "seg_bin_s1[3]" LOC = P51;
+NET "seg_bin_m0[0]" LOC = P61;
+NET "seg_bin_m0[1]" LOC = P62;
+NET "seg_bin_m0[2]" LOC = P63;
+NET "seg_bin_m0[3]" LOC = P64;
+NET "seg_bin_m1[0]" LOC = P65;
+NET "seg_bin_m1[1]" LOC = P67;
+NET "seg_bin_m1[2]" LOC = P68;
+NET "seg_bin_m1[3]" LOC = P71;
+
+NET "reset" LOC = P189;
+NET "alarm" LOC = P13;
+
+NET "stop_btn" LOC = P190;
+NET "start_btn" LOC = P185;
