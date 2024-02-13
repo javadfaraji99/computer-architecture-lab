@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/session 7/experiment/Recieve_Serial_Rx.xst" -ofn "/home/ise/Desktop/session 7/experiment/Recieve_Serial_Rx.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-5 "Recieve_Serial_Rx.ngc" Recieve_Serial_Rx.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o Recieve_Serial_Rx_map.ncd Recieve_Serial_Rx.ngd Recieve_Serial_Rx.pcf 
+par -w -intstyle ise -ol high -t 1 Recieve_Serial_Rx_map.ncd Recieve_Serial_Rx.ncd Recieve_Serial_Rx.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Recieve_Serial_Rx.twx Recieve_Serial_Rx.ncd -o Recieve_Serial_Rx.twr Recieve_Serial_Rx.pcf 
+bitgen -intstyle ise -f Recieve_Serial_Rx.ut Recieve_Serial_Rx.ncd 
+xst -intstyle ise -ifn "/home/ise/Desktop/session 7/experiment/Recieve_Serial_Rx.xst" -ofn "/home/ise/Desktop/session 7/experiment/Recieve_Serial_Rx.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Recieve_Serial_Rx.ucf -p xc3s400-pq208-5 "Recieve_Serial_Rx.ngc" Recieve_Serial_Rx.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o Recieve_Serial_Rx_map.ncd Recieve_Serial_Rx.ngd Recieve_Serial_Rx.pcf 
+par -w -intstyle ise -ol high -t 1 Recieve_Serial_Rx_map.ncd Recieve_Serial_Rx.ncd Recieve_Serial_Rx.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Recieve_Serial_Rx.twx Recieve_Serial_Rx.ncd -o Recieve_Serial_Rx.twr Recieve_Serial_Rx.pcf -ucf Recieve_Serial_Rx.ucf 
+bitgen -intstyle ise -f Recieve_Serial_Rx.ut Recieve_Serial_Rx.ncd 

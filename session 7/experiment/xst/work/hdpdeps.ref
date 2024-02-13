@@ -1,0 +1,8 @@
+V3 3
+FL "/home/ise/Desktop/session 7/experiment/Recieve_Serial_Rx.vhd" 2024/02/13.08:12:31 P.20131013
+EN work/Recieve_Serial_Rx 1707811957 \
+      FL "/home/ise/Desktop/session 7/experiment/Recieve_Serial_Rx.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/Recieve_Serial_Rx/Behavioral 1707811958 \
+      FL "/home/ise/Desktop/session 7/experiment/Recieve_Serial_Rx.vhd" \
+      EN work/Recieve_Serial_Rx 1707811957
