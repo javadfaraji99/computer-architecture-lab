@@ -1,0 +1,9 @@
+V3 3
+FL "/home/ise/Desktop/session 8/experiment/Light_Config.vhd" 2024/02/13.08:31:29 P.20131013
+EN work/Light_Config 1707813133 \
+      FL "/home/ise/Desktop/session 8/experiment/Light_Config.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB ieee/NUMERIC_STD 1381692181
+AR work/Light_Config/Behavioral 1707813134 \
+      FL "/home/ise/Desktop/session 8/experiment/Light_Config.vhd" \
+      EN work/Light_Config 1707813133

@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/session 8/experiment/Light_Config.xst" -ofn "/home/ise/Desktop/session 8/experiment/Light_Config.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Light_Config.ucf -p xc3s400-pq208-5 "Light_Config.ngc" Light_Config.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o Light_Config_map.ncd Light_Config.ngd Light_Config.pcf 
+par -w -intstyle ise -ol high -t 1 Light_Config_map.ncd Light_Config.ncd Light_Config.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Light_Config.twx Light_Config.ncd -o Light_Config.twr Light_Config.pcf -ucf Light_Config.ucf 
+bitgen -intstyle ise -f Light_Config.ut Light_Config.ncd 
