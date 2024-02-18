@@ -1,0 +1,555 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.00 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.00 secs
+ 
+--> 
+Reading design: Display_Led_Light_on_7segment.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Display_Led_Light_on_7segment.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Display_Led_Light_on_7segment"
+Output Format                      : NGC
+Target Device                      : xc3s400-5-pq208
+
+---- Source Options
+Top Module Name                    : Display_Led_Light_on_7segment
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/ise/session 8/experiment/Display_Led_Light_on_7segment.vhd" in Library work.
+Entity <Display_Led_Light_on_7segment> compiled.
+Entity <Display_Led_Light_on_7segment> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Display_Led_Light_on_7segment> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Display_Led_Light_on_7segment> in library <work> (Architecture <Behavioral>).
+Entity <Display_Led_Light_on_7segment> analyzed. Unit <Display_Led_Light_on_7segment> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Display_Led_Light_on_7segment>.
+    Related source file is "/home/ise/session 8/experiment/Display_Led_Light_on_7segment.vhd".
+WARNING:Xst:653 - Signal <counterseg4> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+WARNING:Xst:653 - Signal <counterseg1> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+    Register <counterseg2sig> equivalent to <counterseg2> has been removed
+    Register <counterseg3sig> equivalent to <counterseg3> has been removed
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <counterseg1sig> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <counterseg1sig> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <counterseg1sig>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <counterseg4sig> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <counterseg4sig> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <counterseg4sig>.
+    Found 16x7-bit ROM for signal <seg_data_reg2>.
+    Found 16x7-bit ROM for signal <seg_data_reg3>.
+    Found 5-bit register for signal <seg_sel>.
+    Found 7-bit register for signal <seg_data>.
+    Found 8-bit register for signal <LED>.
+    Found 1-bit register for signal <CLK10MS>.
+    Found 17-bit comparator less for signal <CLK10MS$cmp_lt0000> created at line 55.
+    Found 17-bit up counter for signal <count_div>.
+    Found 10-bit register for signal <counterseg1sig>.
+    Found 4-bit register for signal <counterseg2>.
+    Found 4-bit subtractor for signal <counterseg2$addsub0000> created at line 103.
+    Found 4-bit adder for signal <counterseg2$share0000> created at line 74.
+    Found 4-bit register for signal <counterseg3>.
+    Found 4-bit adder for signal <counterseg3$add0000> created at line 88.
+    Found 4-bit subtractor for signal <counterseg3$addsub0000> created at line 108.
+    Found 4-bit comparator greater for signal <counterseg3$cmp_gt0000> created at line 102.
+    Found 4-bit comparator greater for signal <counterseg3$cmp_gt0001> created at line 106.
+    Found 4-bit comparator less for signal <counterseg3$cmp_lt0000> created at line 84.
+    Found 10-bit register for signal <counterseg4sig>.
+    Found 8-bit register for signal <duty>.
+    Found 8-bit comparator equal for signal <duty$cmp_eq0001> created at line 173.
+    Found 8-bit comparator less for signal <duty$cmp_lt0000> created at line 176.
+    Found 8-bit adder for signal <duty$share0000>.
+    Found 8-bit comparator greater for signal <LED$cmp_gt0000> created at line 171.
+    Found 8-bit register for signal <number>.
+    Found 8-bit adder for signal <number$share0000> created at line 74.
+    Found 8-bit subtractor for signal <number$share0001> created at line 102.
+    Found 1-bit register for signal <previous_down>.
+    Found 1-bit register for signal <previous_up>.
+    Found 3-bit register for signal <RefreshSEG>.
+    Found 3-bit adder for signal <RefreshSEG$addsub0000> created at line 134.
+    Found 3-bit comparator less for signal <RefreshSEG$cmp_lt0000> created at line 133.
+    Summary:
+	inferred   2 ROM(s).
+	inferred   1 Counter(s).
+	inferred  70 D-type flip-flop(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+Unit <Display_Led_Light_on_7segment> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 2
+# Adders/Subtractors                                   : 8
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 2
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+# Counters                                             : 1
+ 17-bit up counter                                     : 1
+# Registers                                            : 17
+ 1-bit register                                        : 8
+ 10-bit register                                       : 2
+ 3-bit register                                        : 1
+ 4-bit register                                        : 2
+ 7-bit register                                        : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 8
+ 17-bit comparator less                                : 1
+ 3-bit comparator less                                 : 1
+ 4-bit comparator greater                              : 2
+ 4-bit comparator less                                 : 1
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <counterseg1sig_9> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg1sig_8> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg1sig_7> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg1sig_6> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg1sig_5> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg1sig_4> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg1sig_3> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg1sig_2> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg1sig_1> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg1sig_0> (without init value) has a constant value of 1 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg4sig_9> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg4sig_8> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg4sig_7> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg4sig_6> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg4sig_5> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg4sig_4> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg4sig_3> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg4sig_2> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg4sig_1> (without init value) has a constant value of 0 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg4sig_0> (without init value) has a constant value of 1 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <counterseg4sig<9:1>> (without init value) have a constant value of 0 in block <Display_Led_Light_on_7segment>.
+WARNING:Xst:2404 -  FFs/Latches <counterseg1sig<9:1>> (without init value) have a constant value of 0 in block <Display_Led_Light_on_7segment>.
+
+Synthesizing (advanced) Unit <Display_Led_Light_on_7segment>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_seg_data_reg2> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_seg_data_reg3> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <Display_Led_Light_on_7segment> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 2
+# Adders/Subtractors                                   : 8
+ 3-bit adder                                           : 1
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 2
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+# Counters                                             : 1
+ 17-bit up counter                                     : 1
+# Registers                                            : 52
+ Flip-Flops                                            : 52
+# Comparators                                          : 8
+ 17-bit comparator less                                : 1
+ 3-bit comparator less                                 : 1
+ 4-bit comparator greater                              : 2
+ 4-bit comparator less                                 : 1
+ 8-bit comparator equal                                : 1
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <counterseg4sig> (without init value) has a constant value of 1 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counterseg1sig> (without init value) has a constant value of 1 in block <Display_Led_Light_on_7segment>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <LED_0> in Unit <Display_Led_Light_on_7segment> is equivalent to the following 7 FFs/Latches, which will be removed : <LED_1> <LED_2> <LED_3> <LED_4> <LED_5> <LED_6> <LED_7> 
+
+Optimizing unit <Display_Led_Light_on_7segment> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Display_Led_Light_on_7segment, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 60
+ Flip-Flops                                            : 60
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Display_Led_Light_on_7segment.ngr
+Top Level Output File Name         : Display_Led_Light_on_7segment
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 23
+
+Cell Usage :
+# BELS                             : 258
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 16
+#      LUT2                        : 8
+#      LUT2_D                      : 2
+#      LUT3                        : 23
+#      LUT3_D                      : 6
+#      LUT4                        : 100
+#      LUT4_D                      : 12
+#      LUT4_L                      : 15
+#      MULT_AND                    : 8
+#      MUXCY                       : 32
+#      MUXF5                       : 11
+#      VCC                         : 1
+#      XORCY                       : 17
+# FlipFlops/Latches                : 60
+#      FD                          : 14
+#      FDE                         : 17
+#      FDR                         : 18
+#      FDRE                        : 2
+#      FDS                         : 8
+#      FDSE                        : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 22
+#      IBUF                        : 2
+#      OBUF                        : 20
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-5 
+
+ Number of Slices:                       96  out of   3584     2%  
+ Number of Slice Flip Flops:             60  out of   7168     0%  
+ Number of 4 input LUTs:                188  out of   7168     2%  
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of    141    16%  
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+gclk                               | BUFGP                  | 27    |
+CLK10MS1                           | BUFG                   | 33    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 9.738ns (Maximum Frequency: 102.693MHz)
+   Minimum input arrival time before clock: 8.317ns
+   Maximum output required time after clock: 6.456ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'gclk'
+  Clock period: 9.738ns (frequency: 102.693MHz)
+  Total number of paths / destination ports: 5384 / 54
+-------------------------------------------------------------------------
+Delay:               9.738ns (Levels of Logic = 12)
+  Source:            duty_7 (FF)
+  Destination:       LED_0 (FF)
+  Source Clock:      gclk rising
+  Destination Clock: gclk rising
+
+  Data Path: duty_7 to LED_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.626   1.148  duty_7 (duty_7)
+     LUT4_D:I0->O         18   0.479   1.499  duty_cmp_eq00009 (duty_cmp_eq00009)
+     LUT2:I0->O            8   0.479   0.980  duty_mux0000<0>11 (duty_mux0000<0>_mand)
+     LUT3:I2->O            1   0.479   0.000  Mcompar_LED_cmp_gt0000_lut<0> (Mcompar_LED_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  Mcompar_LED_cmp_gt0000_cy<0> (Mcompar_LED_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_LED_cmp_gt0000_cy<1> (Mcompar_LED_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_LED_cmp_gt0000_cy<2> (Mcompar_LED_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_LED_cmp_gt0000_cy<3> (Mcompar_LED_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_LED_cmp_gt0000_cy<4> (Mcompar_LED_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_LED_cmp_gt0000_cy<5> (Mcompar_LED_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar_LED_cmp_gt0000_cy<6> (Mcompar_LED_cmp_gt0000_cy<6>)
+     MUXCY:CI->O          10   0.265   0.964  Mcompar_LED_cmp_gt0000_cy<7> (Mcompar_LED_cmp_gt0000_cy<7>)
+     INV:I->O              1   0.479   0.681  Mcompar_LED_cmp_gt0000_cy<7>_inv_INV_0 (LED_cmp_gt0000)
+     FDSE:S                    0.892          LED_0
+    ----------------------------------------
+    Total                      9.738ns (4.467ns logic, 5.271ns route)
+                                       (45.9% logic, 54.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK10MS1'
+  Clock period: 8.708ns (frequency: 114.836MHz)
+  Total number of paths / destination ports: 2259 / 49
+-------------------------------------------------------------------------
+Delay:               8.708ns (Levels of Logic = 7)
+  Source:            counterseg2_2 (FF)
+  Destination:       number_2 (FF)
+  Source Clock:      CLK10MS1 rising
+  Destination Clock: CLK10MS1 rising
+
+  Data Path: counterseg2_2 to number_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              14   0.626   1.304  counterseg2_2 (counterseg2_2)
+     LUT3:I0->O            1   0.479   0.704  counterseg2_mux0003<3>33_SW0 (N45)
+     LUT4_L:I3->LO         1   0.479   0.123  counterseg2_mux0003<3>33 (counterseg2_mux0003<3>33)
+     LUT4:I3->O            1   0.479   0.704  counterseg2_mux0003<3>58 (counterseg2_mux0003<3>58)
+     LUT4:I3->O            3   0.479   0.830  counterseg2_mux0003<3>69 (counterseg2_mux0003<3>)
+     LUT4:I2->O           13   0.479   1.054  counterseg3_cmp_gt00001 (counterseg3_cmp_gt0000)
+     LUT4:I2->O            1   0.479   0.000  number_mux0004<2>_F (N108)
+     MUXF5:I0->O           1   0.314   0.000  number_mux0004<2> (number_mux0004<2>)
+     FDE:D                     0.176          number_2
+    ----------------------------------------
+    Total                      8.708ns (3.990ns logic, 4.718ns route)
+                                       (45.8% logic, 54.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK10MS1'
+  Total number of paths / destination ports: 246 / 26
+-------------------------------------------------------------------------
+Offset:              8.317ns (Levels of Logic = 8)
+  Source:            up (PAD)
+  Destination:       number_2 (FF)
+  Destination Clock: CLK10MS1 rising
+
+  Data Path: up to number_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   0.715   1.259  up_IBUF (up_IBUF)
+     LUT2_D:I0->O          6   0.479   0.876  counterseg2_mux0003<0>11 (N7)
+     LUT4_L:I3->LO         1   0.479   0.159  counterseg2_mux0003<2>45_SW1 (N59)
+     LUT4:I2->O            2   0.479   0.768  counterseg2_mux0003<2>45 (counterseg2_mux0003<2>45)
+     LUT4_D:I3->LO         1   0.479   0.123  counterseg2_mux0003<2>55 (N141)
+     LUT4:I3->O           13   0.479   1.054  counterseg3_cmp_gt00001 (counterseg3_cmp_gt0000)
+     LUT4:I2->O            1   0.479   0.000  number_mux0004<2>_F (N108)
+     MUXF5:I0->O           1   0.314   0.000  number_mux0004<2> (number_mux0004<2>)
+     FDE:D                     0.176          number_2
+    ----------------------------------------
+    Total                      8.317ns (4.079ns logic, 4.238ns route)
+                                       (49.0% logic, 51.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK10MS1'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            seg_sel_4 (FF)
+  Destination:       seg_sel<4> (PAD)
+  Source Clock:      CLK10MS1 rising
+
+  Data Path: seg_sel_4 to seg_sel<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.626   0.745  seg_sel_4 (seg_sel_4)
+     OBUF:I->O                 4.909          seg_sel_4_OBUF (seg_sel<4>)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'gclk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              6.456ns (Levels of Logic = 1)
+  Source:            LED_0 (FF)
+  Destination:       LED<7> (PAD)
+  Source Clock:      gclk rising
+
+  Data Path: LED_0 to LED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             8   0.626   0.921  LED_0 (LED_0)
+     OBUF:I->O                 4.909          LED_7_OBUF (LED<7>)
+    ----------------------------------------
+    Total                      6.456ns (5.535ns logic, 0.921ns route)
+                                       (85.7% logic, 14.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 1.30 secs
+ 
+--> 
+
+
+Total memory usage is 614720 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

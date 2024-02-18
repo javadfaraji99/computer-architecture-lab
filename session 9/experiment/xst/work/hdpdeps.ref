@@ -1,0 +1,9 @@
+V3 3
+FL "/home/ise/session 8/experiment/Display_Led_Light_on_7segment.vhd" 2024/02/18.19:20:27 P.20131013
+EN work/Display_Led_Light_on_7segment 1708284083 \
+      FL "/home/ise/session 8/experiment/Display_Led_Light_on_7segment.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Display_Led_Light_on_7segment/Behavioral 1708284084 \
+      FL "/home/ise/session 8/experiment/Display_Led_Light_on_7segment.vhd" \
+      EN work/Display_Led_Light_on_7segment 1708284083

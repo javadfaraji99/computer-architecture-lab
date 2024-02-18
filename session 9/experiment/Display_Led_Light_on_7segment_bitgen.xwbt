@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/session 8/experiment/Display_Led_Light_on_7segment.ncd
+OUTFILE=/home/ise/session 8/experiment/Display_Led_Light_on_7segment.bit
+FAMILY=Spartan3
+PART=xc3s400-5pq208
+WORKINGDIR=/home/ise/session 8/experiment
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

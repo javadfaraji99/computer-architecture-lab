@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/ise/session 8/experiment/Display_Led_Light_on_7segment.xst" -ofn "/home/ise/session 8/experiment/Display_Led_Light_on_7segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-pq208-5 "Display_Led_Light_on_7segment.ngc" Display_Led_Light_on_7segment.ngd  
+map -intstyle ise -p xc3s400-pq208-5 -cm area -ir off -pr off -c 100 -o Display_Led_Light_on_7segment_map.ncd Display_Led_Light_on_7segment.ngd Display_Led_Light_on_7segment.pcf 
+par -w -intstyle ise -ol high -t 1 Display_Led_Light_on_7segment_map.ncd Display_Led_Light_on_7segment.ncd Display_Led_Light_on_7segment.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Display_Led_Light_on_7segment.twx Display_Led_Light_on_7segment.ncd -o Display_Led_Light_on_7segment.twr Display_Led_Light_on_7segment.pcf 
+bitgen -intstyle ise -f Display_Led_Light_on_7segment.ut Display_Led_Light_on_7segment.ncd 
